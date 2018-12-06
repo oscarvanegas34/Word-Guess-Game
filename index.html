@@ -1,0 +1,133 @@
+<!doctype <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Word Guess Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Reset Css link -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/> -->
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+</head>
+
+<body>
+
+    <div class="jumbotron-fluid background py-1">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-8 my-10">
+                    <div class="embed-responsive embed-responsive-16by9" id="video">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C8lMW0MODFs"
+                        allowfullscreen></iframe>
+                    </div>
+                    <h1>Play the video to understand the game!</h1>
+                </div>
+                <div class="col-12 col-md-4 my-3">
+                    <h1>Word Guess Game</h1>
+                    <h3>Guess the right song</h3>
+                    <button id="new-game-button">
+                        <i class="fas fa-gamepad"></i>
+                        Start A New Game
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center py-5" id="placeholder-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 my-1">
+                            <h2>Fill These In!
+                                </br>  
+                                <span id="placeholders">____ _____ __!</span>  
+                            </h2>                            
+                        </div>
+
+                        <div class="col-12 col-md-6 my-1">
+                            <h2>Incorrect Letters Guessed
+                                </br>  
+                                <span id="guessed-letters"></span>  
+                            </h2>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 text-center py-5">
+                <h3>
+                    Guessed Left: <span id="guesses-left">0</span>
+                </h3>
+            </div>
+            <div class="col-12 col-md-4 text-center py-5">
+                <h3>
+                    Wins: <span id="wins">0</span>
+                </h3>
+            </div>
+            <div class="col-12 col-md-4 text-center py-5">
+                <h3>
+                    Losses: <span id="losses">0</span>
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- This are all the audio files -->
+    <audio id="angel">
+        <source src="assets/audio/ANGEL-elefante.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="wake">
+        <source src="assets/audio/01. Avicii Ft. Aloe Blacc - Wake Me Up [320].mp3" type="audio/mp3">
+    </audio>
+        
+    <audio id="maza">
+        <source src="assets/audio/01-La-Maza.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="palabra">
+        <source src="assets/audio/1. Carlos Varela - Una Palabra (1).mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="amazing">
+        <source src="assets/audio/Aerosmith - Amazing.mp3" type="audio/mp3">
+    </audio>
+     
+    <audio id="depend">
+        <source src="assets/audio/Carlos_Santana - No_One_To_Depend_On.mp3" type="audio/mp3">
+    </audio>        
+        
+    <audio id="mix">        
+        <source src="assets/audio/DJ SALSA PARTY MIX - Rey Ruiz, Mark Anthony, Grupo Niche, Jerry Rivera, Gilberto Santa Rosa - Salsa Party Mix III (1)(1) (1).MP3" type="audio/mp3">
+    </audio>
+
+    <!-- This are all the images for the related to the songs -->
+
+    <div class="images">
+        <img src="assets/images/angel.jpg" id="angel-img">
+        <img src="assets/images/wake-me-up.jpg" id="wake-img">
+        <img src="assets/images/la-maza.jpg" id="maza-img">
+        <img src="assets/images/una-palabra.jpg" id="palabra-img">        
+        <img src="assets/images/amazing.jpg" id="amazing-img">
+        <img src="assets/images/no-one-to-depend-on.jpg" id="depend-img">
+        <img src="assets/images/salsa-party-mix.jpg" id="mix-img">
+    </div>
+
+    
+    <!-- JavaScript link -->
+    <script src="assets/javascrit/game.js"></script>
+
+</body>
+
+</html>
