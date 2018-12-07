@@ -24,21 +24,27 @@
     <div class="jumbotron-fluid background py-1">
         <div class="container py-5">
             <div class="row align-items-center">
-                <div class="col-12 col-md-8 my-10">
-                    <div class="embed-responsive embed-responsive-16by9" id="video">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C8lMW0MODFs"
-                        allowfullscreen></iframe>
-                    </div>
-                    <h1>Play the video to understand the game!</h1>
+                <div class="col-12 col-md-4 my-10">
+                        <h1 id="clue">
+                            Hint about the song!
+                            <br>
+                            <br>
+                            <p id="hint"></p>                            
+                        </h1>
+                        
                 </div>
-                <div class="col-12 col-md-4 my-3">
-                    <h1>Word Guess Game</h1>
-                    <h3>Guess the right song</h3>
-                    <button id="new-game-button">
-                        <i class="fas fa-gamepad"></i>
-                        Start A New Game
-                    </button>
+                <div class="col-12 col-md-4 my-10">
+                        <h1>Word Guess Game</h1>
+                        <h3>Guess the right song</h3>
+                        <button id="new-game-button">
+                            <i class="fas fa-gamepad"></i>
+                            Start A New Game
+                        </button>
                 </div>
+                <div class="col-12 col-md-4 my-10">
+                    <img src="assets/images/word.jpg" id="mark">
+                </div>
+                
             </div>
         </div>
     </div>
@@ -110,19 +116,7 @@
         
     <audio id="mix">        
         <source src="assets/audio/DJ SALSA PARTY MIX - Rey Ruiz, Mark Anthony, Grupo Niche, Jerry Rivera, Gilberto Santa Rosa - Salsa Party Mix III (1)(1) (1).MP3" type="audio/mp3">
-    </audio>
-
-    <!-- This are all the images for the related to the songs -->
-
-    <div class="images">
-        <img src="assets/images/angel.jpg" id="angel-img">
-        <img src="assets/images/wake-me-up.jpg" id="wake-img">
-        <img src="assets/images/la-maza.jpg" id="maza-img">
-        <img src="assets/images/una-palabra.jpg" id="palabra-img">        
-        <img src="assets/images/amazing.jpg" id="amazing-img">
-        <img src="assets/images/no-one-to-depend-on.jpg" id="depend-img">
-        <img src="assets/images/salsa-party-mix.jpg" id="mix-img">
-    </div>
+    </audio>   
 
     
     <!-- JavaScript link -->

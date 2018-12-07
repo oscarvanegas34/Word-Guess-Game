@@ -5,6 +5,7 @@ var $guessedLetters = document.getElementById('guessed-letters');
 var $guessesLeft = document.getElementById('guesses-left');
 var $wins = document.getElementById('wins');
 var $losses = document.getElementById('losses');
+var $hint = document.getElementById('hint');
 
 // Grab music reference to my DOM elements
 var $song1 = document.getElementById('angel');
@@ -14,17 +15,6 @@ var $song4 = document.getElementById('palabra');
 var $song5 = document.getElementById('amazing');
 var $song6 = document.getElementById('depend');
 var $song7 = document.getElementById('mix');
-
-// Grab images reference to my DOM elements
-var $image1 = document.getElementById('angel-img');
-// var $image2 = document.getElementById('wake-img');
-// var $image3 = document.getElementById('maza-img');
-// var $image4 = document.getElementById('palabra-img');
-// var $image5 = document.getElementById('amazing-img');
-// var $image6 = document.getElementById('depend-img');
-// var $image7 = document.getElementById('mix-img');
-
-var $video = document.getElementById('video');
 
 // Create variables for game (wordBank, wins, losses, picked word, guesses left, game running, picked word placeholder, guessed letter bank, incorrect letter bank)
 
@@ -47,11 +37,18 @@ function newGame() {
     guessedLetterBank = [];
     incorrectLetterBank = [];
     pickedWordPlaceholderArr = [];
+    document.getElementById('mark').src = "assets/images/word.jpg";
+
+    $hint.innerHTML = '';    
     
     pauseSong();
+    
 
     // Pick a new word
     pickedWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+
+    console.log(pickedWord);
+    changeHint();
 
     // Create a placeholders out of new pickedWord
     for(var i = 0; i < pickedWord.length; i++){
@@ -149,35 +146,43 @@ document.onkeyup = function(event) {
 }
 
 // Function to play audio.
+
     function playSong() {
         if(pickedWord == 'Angel') {
             $song1.play();
-            $image1.removeAttribute("img");
+            document.getElementById('mark').src = "assets/images/angel.jpg";
+           
         }
         else if(pickedWord == 'Wake Me Up') {
             $song2.play();
+            document.getElementById('mark').src = "assets/images/wake-me-up.jpg";
         }
         else if(pickedWord == 'La Maza') {
             $song3.play();
+            document.getElementById('mark').src = "assets/images/la-maza.jpg";
         }
         else if(pickedWord == 'Una Palabra') {
             $song4.play();
+            document.getElementById('mark').src = "assets/images/una-palabra.jpg";
         }
         else if(pickedWord == 'Amazing') {
             $song5.play();
+            document.getElementById('mark').src = "assets/images/amazing.jpg";
         }
         else if(pickedWord == 'No One To Depend On') {
             $song6.play();
+            document.getElementById('mark').src = "assets/images/no-one-to-depend-on.jpg";
         }
         else if (pickedWord == 'Salsa Party Mix') {
             $song7.play();
+            document.getElementById('mark').src = "assets/images/salsa-party-mix.jpg";
         }
 
         };  
         
         
-// Function to stop audio and reset currentTime to 0 
-  
+// Function to stop audio and reset currentTime to 0  
+
     function pauseSong() {
         if(pickedWord == 'Angel') {
             $song1.pause();
@@ -209,10 +214,35 @@ document.onkeyup = function(event) {
         }
 
         };
+
+    // Change the Hint for the song
+
+    function changeHint() {
+    if(pickedWord == 'Angel') {
+        $hint.innerHTML  = "Te encontré de madrugada Cuando menos lo esperaba";
+    }
+    else if(pickedWord == 'Wake Me Up') {
+        $hint.innerHTML  = "I tried carrying the weight of the world But I only have two hands";
+    }
+    else if(pickedWord == 'La Maza') {
+        $hint.innerHTML  = "Si no creyera en la locura De la garganta del cenzontle";
+    }
+    else if(pickedWord == 'Una Palabra') {
+        $hint.innerHTML  = "Y al mismo tiempo lo esconde todo Igual que el viento que esconde el agua";
+    }
+    else if(pickedWord == 'Amazing') {
+        $hint.innerHTML  = "Had an angel of mercy to see me through all my sins";
+    }
+    else if(pickedWord == 'No One To Depend On') {
+        $hint.innerHTML  = "That I know of, no tengo a nadie";
+    }
+    else if (pickedWord == 'Salsa Party Mix') {
+        $hint.innerHTML  = "Various Singers on this one";
+    }
+
+}    
         
-        // Replacing video with the image of the singer
-
-        // function changeImage() {
+    
 
 
-        // } 
+       
